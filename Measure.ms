@@ -52,3 +52,33 @@ DIVIDE(
 //   - Denk und arbeite ganzheitlich
 // ---------------------------------------------------------------------
 
+Ampelstatus = 
+SWITCH(TRUE(),
+    [Offene_Ticketlast] < 0.8, "Grün",
+    [Offene_Ticketlast] < 1.2, "Gelb",
+    "Rot"
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Ampelstatus
+// Typ:        Measure
+// Tabelle:    Measure
+// Projekt:    Tickest
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Visuelle Einordnung der offenen Ticketlast in Ampelkategorien
+// Beschreibung:
+//   - Bewertet die relative Ticketlast anhand der KPI "Offene_Ticketlast"
+//   - Teilt Werte in Kategorien "Grün", "Gelb" und "Rot"
+//   - Unterstützt gezielte Steuerung und Alerts nach Belastung
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Fokussiere dich auf den Wert
+//   - Halte es einfach und praktisch
+//   - Arbeite iterativ mit Feedback
+//   - Denk und arbeite ganzheitlich
+// ---------------------------------------------------------------------
+
+
