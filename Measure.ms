@@ -9,7 +9,7 @@ CALCULATE(
 // Measure:    Abgeschlossene_Tickets
 // Typ:        Measure (Zählmaß)
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   02.07.2025
 // Zweck:      Zählt alle Tickets mit Status "Geschlossen"
@@ -36,7 +36,7 @@ DIVIDE(
 // Measure:    Abschlussquote_Referat_Prozent
 // Typ:        Measure (Verhältnis / KPI)
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   02.07.2025
 // Zweck:      Anteil der geschlossenen Tickets pro Referat in Prozent
@@ -65,7 +65,7 @@ SWITCH(TRUE(),
 // Measure:    Ampelstatus
 // Typ:        Measure
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   02.07.2025
 // Zweck:      Visuelle Einordnung der offenen Ticketlast in Ampelkategorien
@@ -91,7 +91,7 @@ COUNTROWS('fact_Tickets_gesamt')
 // Measure:    Anzahl_Tickets
 // Typ:        Measure
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   02.07.2025
 // Zweck:      Ermittlung der Gesamtanzahl aller Tickets (Incidents & Aufträge)
@@ -118,7 +118,7 @@ DIVIDE(
 // Measure:    Durchschnitt_Tickets_pro_Tag
 // Typ:        Measure
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   02.07.2025
 // Zweck:      Durchschnittliche tägliche Ticketanzahl
@@ -145,7 +145,7 @@ DIVIDE(
 // Measure:    Offene_Ticketlast
 // Typ:        Measure
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   0.07.2025
 // Zweck:      Verhältnis offener Tickets zur verfügbaren Bearbeitungskapazität
@@ -174,7 +174,7 @@ CALCULATE(
 // Measure:    Offene_Tickets
 // Typ:        Measure
 // Tabelle:    Measure
-// Projekt:    Tickest
+// Projekt:    Tickets
 // Autor:      Doniman Francisco Peña Parra
 // Erstellt:   03.07.2025
 // Zweck:      Berechnung der offenen Tickets über alle Referate hinweg
