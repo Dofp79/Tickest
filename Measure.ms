@@ -52,6 +52,7 @@ DIVIDE(
 //   - Denk und arbeite ganzheitlich
 // ---------------------------------------------------------------------
 
+
 Ampelstatus = 
 SWITCH(TRUE(),
     [Offene_Ticketlast] < 0.8, "Grün",
