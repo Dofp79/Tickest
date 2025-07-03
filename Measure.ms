@@ -249,7 +249,48 @@ AVERAGEX(
 // Datenschutz:
 //   - Keine personenbezogenen Daten enthalten
 // ITIL 4 - Prinzipien:
-//   - Fokussiere dich auf den W
+//   - Fokussiere dich auf den Wert 
+//   - Fördere Transparenz
+
+
+
+Zeitraum_Alle_Tickets = 
+VAR Von_Incidents = CALCULATE(MIN('fact_Incidents'[Erstellt am]), ALL('fact_Incidents'))
+VAR Bis_Incidents = CALCULATE(MAX('fact_Incidents'[Erstellt am]), ALL('fact_Incidents'))
+VAR Von_Auftraege = CALCULATE(MIN('fact_Auftraege'[Erstellt am]), ALL('fact_Auftraege'))
+VAR Bis_Auftraege = CALCULATE(MAX('fact_Auftraege'[Erstellt am]), ALL('fact_Auftraege'))
+
+VAR Von_Gesamt = MIN(Von_Incidents, Von_Auftraege)
+VAR Bis_Gesamt = MAX(Bis_Incidents, Bis_Auftraege)
+
+RETURN
+    "Gesamter Zeitraum der Datensätze: " &
+    FORMAT(Von_Gesamt, "dd.mm.yyyy") &
+    " bis " &
+    FORMAT(Bis_Gesamt, "dd.mm.yyyy")
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Zeitraum_Alle_Tickets
+// Typ:        Text-Maßzahl (für Berichtsmetadaten)
+// Tabelle:    Measure
+// Projekt:    TicketsNachReferate_1.0.0
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:
+//   - Kombinierte Darstellung des Gesamtzeitraums aus zwei Faktentabellen
+// Beschreibung:
+//   - Berechnet das jeweils kleinste und größte Datum in beiden Tabellen
+//   - Gibt eine konsolidierte Zeitspanne zurück
+//   - Ideal für Kartenvisualisierung und Kopfzeile in Berichten
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 – Prinzipien:
+//   - Fördere Transparenz
+//   - Denk und arbeite ganzheitlich
+// ---------------------------------------------------------------------
+
+
 
 
 
