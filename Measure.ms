@@ -107,3 +107,30 @@ COUNTROWS('fact_Tickets_gesamt')
 // ---------------------------------------------------------------------
 
 
+Durchschnitt_Tickets_pro_Tag = 
+DIVIDE(
+    [Anzahl_Tickets],
+    DISTINCTCOUNT('fact_Tickets_gesamt'[Erstellt am])
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Durchschnitt_Tickets_pro_Tag
+// Typ:        Measure
+// Tabelle:    Measure
+// Projekt:    Tickest
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Durchschnittliche tägliche Ticketanzahl
+// Beschreibung:
+//   - Nutzt die Anzahl eindeutiger Tage aus "Erstellt am"
+//   - Division mit Fehlervermeidung via DIVIDE()
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Halte es einfach und praktisch
+//   - Optimiere und automatisiere
+// ---------------------------------------------------------------------
+
+
+
