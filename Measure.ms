@@ -189,5 +189,39 @@ CALCULATE(
 // ---------------------------------------------------------------------
 
 
+Verfügbare_Kapazität_Tage = 
+AVERAGEX(
+    VALUES('fact_Tickets_gesamt'[aktueller_SB]),
+    CALCULATE(
+        COUNTROWS('fact_Tickets_gesamt'),
+        DATESINPERIOD(
+            'fact_Tickets_gesamt'[Erstellt am],
+            MAX('fact_Tickets_gesamt'[Erstellt am]),
+            -30,
+            DAY
+        )
+    ) / 30
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Verfügbare_Kapazität_Tage
+// Typ:        Measure (historisch geschätzt)
+// Tabelle:    Measure
+// Projekt:    Tickets
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Automatische Schätzung der täglichen Bearbeitungskapazität je Referat
+// Beschreibung:
+//   - Nutzt vergangene 30 Tage Ticketdaten zur Berechnung des Durchschnitts
+//   - Kein manuelles Eingreifen durch Referate oder Admin erforderlich
+//   - Basiert auf stabiler Organisationsstruktur mit konstanter Ticketverteilung
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Fokussiere dich auf den W
+
+
+
 
 
