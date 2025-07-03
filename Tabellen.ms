@@ -44,3 +44,27 @@ CALENDAR(DATE(2022,1,1), DATE(2030,12,31))
 //   - Denk und arbeite ganzheitlich
 //   - Halte es einfach und praktisch
 // ---------------------------------------------------------------------
+
+
+dim_Kategorie = 
+DISTINCT(
+    SELECTCOLUMNS('fact_Tickets_gesamt', "Kategorie", 'fact_Tickets_gesamt'[Kategorie])
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Tabelle:    dim_Kategorie
+// Typ:        Dimensionstabelle
+// Projekt:    Tickets
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Kategoriedimension für Gruppierungen und Filterungen von Tickets
+// Beschreibung:
+//   - Extrahiert eindeutige Kategorien aus "Tickets_gesamt"
+//   - Unterstützt Analysen nach Servicetypen oder Vorfallarten
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Fokussiere dich auf den Wert
+//   - Halte es einfach und praktisch
+// ---------------------------------------------------------------------
