@@ -82,3 +82,27 @@ SWITCH(TRUE(),
 // ---------------------------------------------------------------------
 
 
+Anzahl_Tickets = 
+COUNTROWS('fact_Tickets_gesamt')
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Anzahl_Tickets
+// Typ:        Measure
+// Tabelle:    Measure
+// Projekt:    Tickest
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Ermittlung der Gesamtanzahl aller Tickets (Incidents & Aufträge)
+// Beschreibung:
+//   - Zählt alle Zeilen in der kombinierten Tabelle "Tickets_gesamt"
+//   - Grundlage für alle Folgeanalysen wie Verteilung, Trends oder Status
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Fokussiere dich auf den Wert
+//   - Beginne dort, wo du stehst
+//   - Halte es einfach und praktisch
+// ---------------------------------------------------------------------
+
+
