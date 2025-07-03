@@ -163,4 +163,31 @@ DIVIDE(
 // ---------------------------------------------------------------------
 
 
+Offene_Tickets = 
+CALCULATE(
+    COUNTROWS('fact_Tickets_gesamt'),
+    'fact_Tickets_gesamt'[Status] IN { "Offen", "In Bearbeitung" }
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Offene_Tickets
+// Typ:        Measure
+// Tabelle:    Measure
+// Projekt:    Tickest
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   03.07.2025
+// Zweck:      Berechnung der offenen Tickets über alle Referate hinweg
+// Beschreibung:
+//   - Filtert Tickets, deren Status "Offen" oder "In Bearbeitung" ist
+//   - Ermöglicht Monitoring der aktiven Tickets im Backlog
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Fokussiere dich auf den Wert
+//   - Optimiere und automatisiere
+// ---------------------------------------------------------------------
+
+
+
 
