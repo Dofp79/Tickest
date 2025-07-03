@@ -68,3 +68,29 @@ DISTINCT(
 //   - Fokussiere dich auf den Wert
 //   - Halte es einfach und praktisch
 // ---------------------------------------------------------------------
+
+
+dim_Referat = 
+DISTINCT(
+    SELECTCOLUMNS('fact_Tickets_gesamt', "Referat", 'fact_Tickets_gesamt'[Sachgebiet])
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Tabelle:    dim_Referat
+// Typ:        Dimensionstabelle
+// Projekt:    Tickets
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Strukturierung der Analyse nach zuständigen Referaten / SGLs
+// Beschreibung:
+//   - Listet alle in "Tickets_gesamt" vorkommenden Sachbearbeitergruppen
+//   - Dient als Gruppierungs- und Filterdimension in Visualisierungen
+//   - Grundlage für die Ampelsteuerung auf Referatsebene
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Denk und arbeite ganzheitlich
+//   - Optimiere und automatisiere
+// ---------------------------------------------------------------------
+
