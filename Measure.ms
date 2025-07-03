@@ -133,4 +133,34 @@ DIVIDE(
 // ---------------------------------------------------------------------
 
 
+Offene_Ticketlast = 
+DIVIDE(
+    [Offene_Tickets],
+    [Verfügbare_Kapazität_Tage], 
+    0
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Offene_Ticketlast
+// Typ:        Measure
+// Tabelle:    Measure
+// Projekt:    Tickest
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   0.07.2025
+// Zweck:      Verhältnis offener Tickets zur verfügbaren Bearbeitungskapazität
+// Beschreibung:
+//   - Misst die relative Belastung je Referat oder Sachbearbeitergruppe
+//   - Wird als KPI zur Ampelsteuerung (Grün, Gelb, Rot) verwendet
+//   - Nutzt DIVIDE mit Fehlervermeidung (Division durch 0 ergibt 0)
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Fokussiere dich auf den Wert
+//   - Arbeite iterativ mit Feedback
+//   - Denk und arbeite ganzheitlich
+//   - Optimiere und automatisiere
+// ---------------------------------------------------------------------
+
+
 
