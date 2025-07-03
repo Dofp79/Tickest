@@ -94,3 +94,28 @@ DISTINCT(
 //   - Optimiere und automatisiere
 // ---------------------------------------------------------------------
 
+
+dim_Status = 
+DISTINCT(
+    SELECTCOLUMNS('fact_Tickets_gesamt', "Status", 'fact_Tickets_gesamt'[Status])
+)
+
+// ---------------------------------------------------------------------
+// Dokumentation
+// Tabelle:    dim_Status
+// Typ:        Dimensionstabelle
+// Projekt:    Tickets
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:      Bereitstellung einer sauberen Statusdimension für Ticketanalysen
+// Beschreibung:
+//   - Extrahiert alle eindeutigen Statuswerte aus der Faktentabelle "Tickets_gesamt"
+//   - Ermöglicht Gruppierung, Segmentierung und Filterung nach Status
+//   - Basis für saubere Modellierung (Star Schema)
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 - Prinzipien:
+//   - Denk und arbeite ganzheitlich
+//   - Halte es ein
+
+
