@@ -1,3 +1,33 @@
+Zeitraum = 
+VAR Von = MIN('dim_Datum'[Date])
+VAR Bis = MAX('dim_Datum'[Date])
+RETURN
+    "Datenzeitraum: " &
+    FORMAT(Von, "dd.mm.yyyy") &
+    " bis " &
+    FORMAT(Bis, "dd.mm.yyyy")
+// ---------------------------------------------------------------------
+// Dokumentation
+// Measure:    Zeitraum_Text
+// Typ:        Text-Maßzahl (für Anzeige)
+// Tabelle:    Measure
+// Projekt:    Tickets
+// Autor:      Doniman Francisco Peña Parra
+// Erstellt:   02.07.2025
+// Zweck:
+//   - Zeigt den ausgewählten Analysezeitraum als lesbaren Text
+//   - Unterstützt Transparenz in Berichten
+// Beschreibung:
+//   - Nutzt MIN und MAX auf dim_Datum[Date] basierend auf Filterkontext
+//   - Format: „dd.mm.yyyy bis dd.mm.yyyy“
+// Datenschutz:
+//   - Keine personenbezogenen Daten enthalten
+// ITIL 4 – Prinzipien:
+//   - Fördere Transparenz
+//   - Halte es einfach und praktisch
+// ---------------------------------------------------------------------
+
+
 Abgeschlossene_Tickets = 
 CALCULATE(
     [Anzahl_Tickets],
